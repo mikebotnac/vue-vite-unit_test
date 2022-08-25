@@ -1,0 +1,13 @@
+version: '3'
+services:
+  vitejs:
+    build:
+      context: ../esmart-client-app
+    ports:
+      - 6600:3000
+      - 24678:24678
+    container_name: esmart-client-app
+    stdin_open: true
+    volumes:
+       - ../esmart-client-app:/usr/src
+       - /usr/src/node_modules

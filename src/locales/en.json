@@ -1,0 +1,13 @@
+{
+    "components": {
+        "pages": {
+            "vehicles": {
+                "status": {
+                    "stats": {
+                        "activeUnits": "Active units %"
+                    }
+                }
+            }
+        }
+    }
+}

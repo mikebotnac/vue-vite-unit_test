@@ -1,0 +1,73 @@
+.my-container {
+    width: 600px;
+    height: 1024px;
+    margin: 0 auto;
+    background-color: #ebf5ff;
+}
+
+.header{
+    background-image: url('assets/Header-mail@3x.jpg');
+    background-position: center;
+    background-size: contain;
+    height: 100px;
+}
+
+/* Colors */
+.-dark-grey{
+    background-color: #94a6c0;
+}
+.-blue{
+    background-color: #1b63ff;
+}
+
+.rectangle{
+    width: 500px;
+    height: 277px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 40px 50px 0;
+}
+
+.rectangle--top{
+    width: 500px;
+    height: 38px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+/* Text */
+.text{
+    margin: 32px 50px 33px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 2;
+    color: #000;
+    text-align: center;
+}
+
+.text-account{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2.83;
+    margin: 0;
+}
+
+/* Buttons */
+.button{
+   width: 162px;
+   height: 38px; 
+   border-radius: 3px;
+   padding: 10px 16px 10px;
+   border: none;
+}
+
+.button--confirm{
+    color: white;
+    font-size: 12px;
+    font-family: 'Verdana', sans-serif;
+ }

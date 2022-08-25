@@ -1,0 +1,3 @@
+[submodule ".github/shared"]
+	path = .github/shared
+	url = https://github.com/Esmartdriver/esmart-github-workflow.git

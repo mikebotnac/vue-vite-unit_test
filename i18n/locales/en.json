@@ -1,0 +1,139 @@
+{
+  "messages": {
+    "hello": "Hello",
+    "toggle_language": "Toggle Language",
+    "Maximum search value": "Maximum search value is 40",
+    "SMS Verification": "SMS Verification",
+    "SMS_msg": "You will receive soon an sms with a validation code.",
+    "Verification Code": "Verification Code",
+    "Resend me an sms": "Resend me an sms",
+    "Verify Me": "Verify Me",
+    "Loading": "Loading",
+    "reset them": "reset them",
+    "no vehicles": "There is no vehicles corresponding to your filters. Try to",
+    "no data available": "There is no data available",
+    "no Bridge": "There is no Bridge Collision Prevention for your selected parameters. Please try other parameters.",
+    "noOverspeed": "There is no over speed for your selected parameters. Please try other parameters.",
+    "main_msg": "Get access to your fleet statistics and update your device configuration from anywhere!"
+  },
+  "login": {
+    "Login": "Login",
+    "Email": "Email",
+    "Password": "Password",
+    "log_with": "Or log with",
+    "log in": "Log in",
+    "Forgot": "Forgot your password ?"
+  },
+  "menu": {
+    "title": "MENU",
+    "Vehicle Locator": "Vehicle Locator",
+    "Overspeed": "Overspeed",
+    "Route Analysis": "Route Analysis",
+    "Analytics": "Analytics",
+    "Settings": "Settings",
+    "Status": "Status",
+    "Vehicle Management": "Vehicle Management",
+    "Configure Settings": "Configure Settings",
+    "Bridge Collision Prevention": "Bridge Collision Prevention",
+    "Vehicle Status": "Vehicle Status",
+    "logout": "Logout",
+    "Changes History": "Changes History",
+    "Map": "Map"
+  },
+  "main_toolbar": {
+    "Find a vehicle": "Find a vehicle",
+    "Locate": "Locate",
+    "View vehicle settings": "View vehicle settings",
+    "Traffic": "Traffic",
+    "Report": "Report",
+    "Search": "Search",
+    "Multiple Vehicle": "Multiple Vehicle",
+    "One Vehicle": "One Vehicle",
+    "Stats": "Stats",
+    "Value": "Value",
+    "Map": "Map",
+    "Export Excel": "Export Excel",
+    "Start time": "Start time",
+    "End time": "End time",
+    "Select a date": "Select a date",
+    "Speed zone ": "Speed zone ",
+    "Speed": "Speed",
+    "Yes": "Yes",
+    "No": "No",
+    "Device active": "Device active",
+    "Save": "Save",
+    "Reset filters": "Reset filters",
+    "Reset limits": "Reset Vehicle Limit"
+  },
+  "main_footer": {
+    "Overspeed": "Overspeed",
+    "Stopped": "Stopped ",
+    "Idle": "Idle",
+    "Page": "Page",
+    "Previous": "Previous",
+    "Next": "Next",
+    "Bridge colision prevention": "Bridge colision prevention",
+    "Running": "Running "
+  },
+  "table_header": {
+    "Date": "Date",
+    "Unit": "Unit ",
+    "Select many vehicles": "Select many vehicles ",
+    "Bridge collision Prevention details": "Bridge collision Prevention details ",
+    "Speed Limit enable": "Speed Limit enable ",
+    "Immobilize vehicle": "Immobilize vehicle ",
+    "Speed Limiter": "Speed Limiter ",
+    "Over Allowed": "Over Allowed ",
+    "Allowed Speed Limit": "Allowed Speed Limit ",
+    "Power": "Power ",
+    "Details": "Details",
+    "Immobilized": "Immobilized ",
+    "Analytics": "Analytics ",
+    "Status": "Status ",
+    "Created By": "Created By ",
+    "Update at": "Update at",
+    "Description": "Description",
+    "Total Number": "Total Number",
+    "Map": "Map "
+  },
+  "vehicle": {
+    "settings": {
+      "success": "Settings successfully updated for",
+      "failed": "Settings couldn't be update for",
+      "success_title": "Shadow updated",
+      "failed_title": "Can't update vehicle settings"
+    }
+  },
+  "Vehicle Status": {
+    "Management": "Management",
+    "Active": "Active",
+    "Speed Limiter": "Speed Limiter",
+    "Active Speed Limiter": "Active Speed Limiter",
+    "E-smart Speed Limiter": "E-smart Speed Limiter",
+    "Inactive Speed Limit": "Inactive Speed Limit",
+    "Total vehicle": "Total",
+    "Connected vehicle": "Connected",
+    "Not connected vehicle": "Not connected ",
+    "Units": "Units"
+  },
+  "DropdownSimple": {
+    "Last Day": "Last 24 hours",
+    "Last 7 days": "Last 7 days",
+    "Last 14 days": "Last 14 days",
+    "Last 30 days": "Last 30 days"
+  },
+  "timezone": "Timezone",
+  "user": {
+    "password": {
+      "password": "Password",
+      "change": "Change my password",
+      "requirement": "Your password needs :",
+      "requirements": {
+        "length": "At least 16 characters (current length:",
+        "upercase": "At least 1 uppercase",
+        "lowercase": "At least 1 lowercase",
+        "specialCharacter": "At least 1 special character (can be : $!%*?&_-)"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "presets": [
+      ["@babel/preset-env", {
+        "modules": false
+      }],
+      ["@babel/react", {}, "uniqiename"],
+      ["@babel/preset-env", {
+        "useBuiltIns": false,
+        "targets": {
+          "browsers": ["last 2 versions"]
+        },
+        "debug": true
+      }, "uniqiename2"],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "dynamic-import-webpack",
+      "syntax-dynamic-import",
+      "dynamic-import-node",
+      "transform-class-properties",
+      "transform-object-rest-spread",
+      "@babel/plugin-transform-runtime",
+      ["@babel/transform-runtime", {}, "babel-run-time"]
+    ],
+    "env": {
+      "test": {
+        "presets": ["@babel/preset-env"]
+      }
+    }
+  }

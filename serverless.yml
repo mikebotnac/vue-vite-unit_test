@@ -1,0 +1,150 @@
+service: esmart-client-app
+configValidationMode: error
+
+provider:
+  name: aws
+  stage: ${opt:stage, self:provider.stage}
+  runtime: nodejs12.x
+  role: ${ssm:/global/default-lambda-role-arn}
+  versionFunctions: false
+  lambdaHashingVersion: 20201221
+  tracing:
+    apiGateway: true
+    lambda: true
+  tags:
+    "lambda:createdBy": "sls"
+    datadog: "monitored"
+    env: ${ssm:/global/environment}
+
+package:
+  patterns:
+    - "!set_env.bat"
+    - "!set_env.bat.example"
+    - "!node_modules/**"
+    - "!public/**"
+    - "!src/**"
+    - "!babel.config.js"
+    - "!package-lock.json"
+    - "!package.json"
+    - "!vue.config.js"
+    - "!.env.*"
+    - "!README.md"
+    - "!requirements.*"
+    - "!.gitignore"
+
+plugins:
+  - serverless-single-page-app-plugin
+  - serverless-hooks-plugin
+  - serverless-s3-sync
+  # - serverless-domain-manager # uncomment the plugin
+  - serverless-offline
+
+custom:
+  hooks:
+    before:package:createDeploymentArtifacts:
+      - yarn install --verbose && yarn build
+  s3Sync:
+    - bucketName: esmart-client-app-${ssm:/global/environment-short}
+      localDir: dist
+      acl: public-read
+  s3Bucket: esmart-client-app-${ssm:/global/environment-short}
+  # customDomain:
+  #   domainName: ${ssm:/global/client-app-domain-name}
+  #   stage: ${opt:stage, self:provider.stage}
+  #   certificateName: ${ssm:/global/api-domain-certificate}
+  #   createRoute53Record: true
+  #   basePath: ''
+  #   endpointType: 'regional'
+  #   securityPolicy: tls_1_2
+
+resources:
+  Resources:
+    ## Specifying the S3 Bucket
+    ClientPortalAppS3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.s3Bucket}
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: index.html
+    ## Specifying the policies to make sure all files inside the Bucket are avaialble to CloudFront
+    ClientPortalAppS3BuckettPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: ClientPortalAppS3Bucket
+        PolicyDocument:
+          Statement:
+            - Sid: PrivateReadGetObject
+              Effect: Allow
+              Principal: "*"
+              Action:
+              - s3:GetObject
+              Resource:
+              - arn:aws:s3:::${self:custom.s3Bucket}/*
+              - arn:aws:s3:::${self:custom.s3Bucket}
+    ## Specifying the CloudFront Distribution to server your Web Application
+    ClientPortalAppCloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Aliases: 
+          - ${ssm:/global/client-app-domain-name}
+          Origins:
+            - DomainName: ${self:custom.s3Bucket}.s3.amazonaws.com
+              ## An identifier for the origin which must be unique within the distribution
+              Id: ClientPortalApp
+              CustomOriginConfig:
+                HTTPPort: 80
+                HTTPSPort: 443
+                OriginProtocolPolicy: https-only
+              ## In case you want to restrict the bucket access use S3OriginConfig and remove CustomOriginConfig
+              # S3OriginConfig:
+              #   OriginAccessIdentity: origin-access-identity/cloudfront/E127EXAMPLE51Z
+          Enabled: 'true'
+          ## Uncomment the following section in case you are using a custom domain
+          # Aliases:
+          # - mysite.example.com
+          DefaultRootObject: index.html
+          ## Since the Single Page App is taking care of the routing we need to make sure ever path is served with index.html
+          ## The only exception are files that actually exist e.h. app.js, reset.css
+          CustomErrorResponses:
+            - ErrorCode: 404
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+          DefaultCacheBehavior:
+            AllowedMethods:
+              - DELETE
+              - GET
+              - HEAD
+              - OPTIONS
+              - PATCH
+              - POST
+              - PUT
+            ## The origin id defined above
+            TargetOriginId: ClientPortalApp
+            ## Defining if and how the QueryString and Cookies are forwarded to the origin which in this case is S3
+            ForwardedValues:
+              QueryString: 'false'
+              Cookies:
+                Forward: none
+            ## The protocol that users can use to access the files in the origin. To allow HTTP use `allow-all`
+            ViewerProtocolPolicy: redirect-to-https
+          ## The certificate to use when viewers use HTTPS to request objects.
+          HttpVersion: http2
+          ViewerCertificate:
+            AcmCertificateArn: ${ssm:/global/api-domain-certificate-arn}
+            SslSupportMethod: vip
+            # MinimumProtocolVersion: TLSv1.2_2018
+          ## Uncomment the following section in case you want to enable logging for CloudFront requests
+          Logging:
+            IncludeCookies: 'false'
+            Bucket: esmart-client-app-${ssm:/global/environment-short}.s3.amazonaws.com
+            Prefix: esmart-client-app-${ssm:/global/environment-short}
+
+  ## In order to print out the hosted domain via `serverless info` we need to define the DomainName output for CloudFormation
+  Outputs:
+    ClientPortalAppCloudFrontDistributionOutput:
+      Value:
+        'Fn::GetAtt': [ ClientPortalAppCloudFrontDistribution, DomainName ]

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-cloche</title>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.299123365">
+        <g id="ESMART-Styleguide" transform="translate(-363.000000, -7345.000000)" fill="#FFFFFF">
+            <g id="MENU-GAUCHE" transform="translate(341.000000, 7136.000000)">
+                <g id="icon-cloche" transform="translate(22.000000, 209.000010)">
+                    <path d="M0.8064,11.6736 C-0.2688,11.6736 -0.2688,10.0864 0.8064,10.0864 C1.6768,10.0864 1.728,7.0144 1.728,5.9392 C1.728,3.3792 3.264,1.8944 5.0048,1.536 C4.6976,0.8192 5.2096,0 5.9776,0 C6.7456,0 7.2576,0.8192 6.9504,1.536 C8.6912,1.8944 10.2272,3.3792 10.2272,5.9392 C10.2272,7.0144 10.2784,10.0864 11.1488,10.0864 C12.224,10.0864 12.224,11.6736 11.1488,11.6736 L0.8064,11.6736 Z" id="Fill-1"></path>
+                    <path d="M6.8992,12.032 C7.3088,12.7488 6.7968,13.6704 5.9776,13.6704 C5.1584,13.6704 4.6464,12.7488 5.056,12.032 L6.8992,12.032 Z" id="Fill-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

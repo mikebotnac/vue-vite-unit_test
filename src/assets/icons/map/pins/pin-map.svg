@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pin-map</title>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ESMART-Styleguide" transform="translate(-758.000000, -1386.000000)" fill="#7E9BC2">
+            <g id="Group-9" transform="translate(677.000000, 1386.000000)">
+                <path d="M88,9.28571429 C86.45356,9.28571429 85.2,8.00657143 85.2,6.42857143 C85.2,4.85057143 86.45356,3.57142857 88,3.57142857 C89.54644,3.57142857 90.8,4.85057143 90.8,6.42857143 C90.8,8.00657143 89.54644,9.28571429 88,9.28571429 M88,0 C84.1340202,0 81,3.20269372 81,7.15338594 C81,11.1037891 88,20 88,20 C88,20 95,11.1040782 95,7.15367496 C95,3.20269372 91.865697,0 88,0" id="pin-map"></path>
+            </g>
+        </g>
+    </g>
+</svg>

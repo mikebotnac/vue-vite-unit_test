@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pin-running</title>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ESMART-Styleguide" transform="translate(-419.000000, -1039.000000)" fill="#1B63FF">
+            <g id="Running" transform="translate(419.000000, 1038.000000)">
+                <path d="M10,14 C7.7908,14 6,12.2092 6,10 C6,7.7908 7.7908,6 10,6 C12.2092,6 14,7.7908 14,10 C14,12.2092 12.2092,14 10,14 M10,1 C4.47717172,1 0,5.48377121 0,11.0147403 C0,16.5453048 10,29 10,29 C10,29 20,16.5457094 20,11.0151449 C20,5.48377121 15.5224242,1 10,1" id="pin-running"></path>
+            </g>
+        </g>
+    </g>
+</svg>

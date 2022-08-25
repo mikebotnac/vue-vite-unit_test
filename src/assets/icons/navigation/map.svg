@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="14px" viewBox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Fill 1</title>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.299123365">
+        <g id="ESMART-Styleguide" transform="translate(-364.000000, -7244.000000)" fill="#FFFFFF">
+            <g id="MENU-GAUCHE" transform="translate(341.000000, 7136.000000)">
+                <path d="M27.752,114.355008 C26.691584,114.355008 25.832,113.495424 25.832,112.435008 C25.832,111.374592 26.691584,110.515008 27.752,110.515008 C28.812416,110.515008 29.672,111.374592 29.672,112.435008 C29.672,113.495424 28.812416,114.355008 27.752,114.355008 M27.752,108 C25.127552,108 23,110.127552 23,112.752 C23,115.376256 27.752,121.286016 27.752,121.286016 C27.752,121.286016 32.504,115.376448 32.504,112.752192 C32.504,110.127552 30.376256,108 27.752,108" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
